@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic African cuisine.">
+  <title id="restaurantTitle">Restaurant</title>
+  <link rel="icon" id="siteFavicon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <nav class="navbar container">
+    <a href="#home" class="logo"><span class="logo-name"></span><span>★</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-button">Book a Table</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero-section" id="home">
+    <div class="container hero-content">
+      <p class="eyebrow" id="restaurantWelcome"></p>
+      <h1 id="restaurantTagline"></h1>
+      <p id="restaurantDescription"></p>
+      <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <section class="story-section section-padding" id="about">
+    <div class="container">
+      <p class="eyebrow">OUR STORY</p>
+      <h2>A Taste of African <em>Heritage.</em></h2>
+      <p id="restaurantStory"></p>
+    </div>
+  </section>
+
+  <section class="menu-section section-padding" id="menu">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">FROM OUR KITCHEN</p>
+        <h2>Made to Be <em>Savoured.</em></h2>
+        <p>Choose your favorites and build your order.</p>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <section class="cart-section section-padding" id="cart">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR SELECTION</p>
+        <h2>Your <em>Order.</em></h2>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-total"><strong>Total: <span id="cartTotal"></span></strong></div>
+      <button class="btn btn-primary" id="sendOrder" type="button">Order via WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="gallery-section section-padding" id="gallery">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">A FEAST FOR THE EYES</p>
+        <h2>Moments at the <em>Table.</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Restaurant interior" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800" alt="Dining experience" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800" alt="Grilled food" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section section-padding" id="contact">
+    <div class="container contact-content">
+      <p class="eyebrow">YOUR TABLE IS WAITING</p>
+      <h2>Reserve Your <em>Table.</em></h2>
+      <p>Join us for a memorable dining experience.</p>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="customerName">Full Name</label>
+          <input type="text" id="customerName" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="customerPhone">Phone Number</label>
+          <input type="tel" id="customerPhone" placeholder="+250..." pattern="[+]?[0-9]{9,15}" title="Enter a valid phone number (9–15 digits)" required>
+        </div>
+        <div class="form-group">
+          <label for="bookingDate">Reservation Date</label>
+          <input type="date" id="bookingDate" required>
+          <p class="booking-hint" id="bookingHint" aria-live="polite"></p>
+        </div>
+        <div class="form-group">
+          <label for="bookingTime">Reservation Time</label>
+          <select id="bookingTime" required disabled>
+            <option value="">Choose a date first</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="guestCount">Number of Guests</label>
+          <select id="guestCount" required>
+            <option value="">Select guests</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Request a Reservation</button>
+        <p id="bookingMessage" class="booking-message" aria-live="polite"></p>
+      </form>
+
+      <p class="contact-note" id="contactNote"></p>
+      <div class="hours" id="hoursList"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <a href="#home" class="logo"><span class="logo-name"></span><span>★</span></a>
+    <div class="footer-links" id="footerLinks"></div>
+    <p id="footerCopy"></p>
+  </div>
+</footer>
+
+<div class="floating-cart" id="floatingCart">
+  <div class="floating-cart-info">
+    <span id="floatingCartCount">0 items</span>
+    <strong id="floatingCartTotal"></strong>
+  </div>
+  <button type="button" id="viewCartButton">View Order</button>
+</div>
+</body>
+</html>

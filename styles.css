@@ -1,0 +1,116 @@
+:root{--primary:#173d32;--accent:#d6ad60;--cream:#f7f3eb;--dark:#1d2119;--text:#55574f}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:90px}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}
+img{display:block;width:100%;object-fit:cover}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,.logo{font-family:'Playfair Display',serif}
+em{color:var(--accent);font-style:italic}
+.container{width:min(1120px,90%);margin:auto}
+.section-padding{padding:100px 0}
+.eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:3px;margin-bottom:18px}
+
+/* Header */
+.header{position:sticky;top:0;z-index:1000;background:var(--primary);border-bottom:1px solid rgba(255,255,255,.15)}
+.navbar{height:85px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:29px;font-weight:700;color:#fff;letter-spacing:2px;flex-shrink:0}
+.logo>span:last-child{color:var(--accent)}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:#fff;font-size:13px;transition:color .3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-button{background:var(--accent);color:var(--dark);padding:12px 20px;font-size:12px;font-weight:700}
+.menu-toggle{display:none;background:none;border:0;color:#fff;font-size:27px;cursor:pointer}
+
+/* Buttons */
+.btn{display:inline-block;padding:15px 25px;font-size:13px;font-weight:700;transition:.3s}
+.btn-primary{background:var(--accent);color:var(--dark);border:none;cursor:pointer}
+.btn-primary:hover{filter:brightness(1.1);transform:translateY(-3px)}
+
+/* Hero + story */
+.hero-section{background:linear-gradient(135deg,var(--primary),#245344);color:#fff;padding:110px 0;text-align:center}
+.hero-content{max-width:800px}
+.hero-section h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.15;margin-bottom:22px}
+.hero-section p:not(.eyebrow){font-size:1.1rem;line-height:1.8;max-width:600px;margin:0 auto 28px}
+.story-section{color:var(--primary);text-align:center}
+.story-section .container{max-width:850px}
+.story-section h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:20px}
+.story-section p:not(.eyebrow){font-size:1.05rem;line-height:1.9}
+
+/* Sections */
+.section-heading{text-align:center;margin-bottom:55px}
+.section-heading h2{font-size:clamp(35px,4vw,52px);font-weight:500;line-height:1.2}
+.section-heading>p:last-child{color:var(--text);font-size:14px;margin-top:14px}
+.menu-section{background:#eee8dc}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.menu-card{background:#fff;transition:transform .3s}
+.menu-card:hover{transform:translateY(-7px)}
+.menu-card img{height:240px}
+.menu-card-content{padding:25px}
+.menu-card h3{font-size:20px}
+.menu-card p{color:var(--text);font-size:13px;margin:10px 0 17px}
+.menu-card span{display:block;color:var(--primary);font-weight:700;font-size:14px}
+.add-to-cart{margin-top:15px}
+
+/* Cart */
+.cart-section .container{max-width:700px}
+.cart-item{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 0;border-bottom:1px solid rgba(0,0,0,.12)}
+.cart-item p{margin-top:6px;font-size:13px;opacity:.7}
+.cart-controls{display:flex;align-items:center;gap:12px}
+.cart-controls button{width:32px;height:32px;border:1px solid var(--accent);background:transparent;color:var(--dark);font-size:20px;cursor:pointer;border-radius:4px}
+.cart-controls button:hover{background:var(--accent)}
+.cart-total{margin:25px 0;padding-top:18px;border-top:1px solid rgba(0,0,0,.2);font-size:19px}
+#sendOrder{width:100%}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px}
+.gallery-grid img{height:300px}
+
+/* Contact + form */
+.contact-section{background:var(--primary);color:#fff;text-align:center}
+.contact-content h2{font-size:clamp(45px,6vw,70px);font-weight:500;line-height:1.1}
+.contact-content>p:not(.eyebrow){color:rgba(255,255,255,.75);margin:25px 0}
+.contact-note{font-size:12px}
+.booking-form{max-width:550px;margin:40px auto 25px;padding:30px;background:rgba(255,255,255,.08);text-align:left;border:1px solid rgba(255,255,255,.15)}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:13px;margin-bottom:8px}
+.form-group input,.form-group select{width:100%;padding:13px;border:1px solid rgba(255,255,255,.25);background:var(--cream);color:var(--dark);font:inherit;font-size:14px}
+.form-group input:focus,.form-group select:focus{outline:2px solid var(--accent)}
+.booking-form .btn{width:100%}
+.booking-message{margin-top:18px;text-align:center;font-size:13px;color:#f2d49e}
+
+/* Footer */
+.footer{background:var(--dark);color:#fff;padding:30px 0}
+.footer-content{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footer-links{display:flex;gap:18px;font-size:13px}
+.footer-links a:hover{color:var(--accent)}
+.footer-content p{color:rgba(255,255,255,.55);font-size:11px}
+
+/* Floating cart (mobile only) */
+.floating-cart{display:none}
+
+@media (max-width:768px){
+  body{padding-bottom:80px}
+  .section-padding{padding:70px 0}
+  .navbar{height:75px}
+  .menu-toggle{display:block}
+  .nav-button{display:none}
+  .nav-links{display:none;position:absolute;top:75px;left:0;width:100%;background:var(--dark);flex-direction:column;gap:0;padding:15px 5%}
+  .nav-links.active{display:flex}
+  .nav-links a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .menu-grid,.gallery-grid{grid-template-columns:1fr}
+  .gallery-grid img{height:260px}
+  .booking-form{padding:20px}
+  .footer-content{flex-direction:column;text-align:center}
+  .floating-cart.show{position:fixed;bottom:15px;left:12px;right:12px;z-index:9999;display:flex;align-items:center;justify-content:space-between;background:var(--primary);color:#fff;padding:14px 18px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,.25)}
+  .floating-cart-info{display:flex;flex-direction:column;gap:4px}
+  #viewCartButton{background:var(--accent);color:var(--primary);border:none;padding:11px 18px;border-radius:8px;font-weight:700;cursor:pointer}
+}
+
+/* Logo image, booking hint, opening hours */
+.logo-img{display:inline-block;width:auto;height:36px;margin-right:10px;vertical-align:middle}
+.booking-hint{margin-top:8px;font-size:12px;color:#f2d49e;min-height:1em}
+.form-group select:disabled{opacity:.6;cursor:not-allowed}
+.hours{max-width:340px;margin:22px auto 0;font-size:13px;text-align:left}
+.hours div{display:flex;justify-content:space-between;gap:20px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.hours .closed{opacity:.6}
